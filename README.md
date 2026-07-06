@@ -86,3 +86,867 @@ Logecs can directly understand:
   - Spirituality does not need to be based on principle of experience, but implies it: mathematically, it's not cognition, and not not cognition, but it's cause, effect, trial and error without paying importance to "cognition bit", that it's life system not logic.
 
 All this imperfection and dukkha leads to StaTesc: Laegna StaTesc (title of repo is artistic) is Laegna Statistics, and Laegna StaTez would be it's Logex machine - automation (from StaTistics => StaTistix, parallel dev is StaTex, that it operates within subwhole-precision, subzero number: many such numbers are worth single, normal value, and they are infinitely smaller by magnitude not direction or "value" in this small magnitude, but equal - *percentage* of something, and in Z, infinitely small number in same direction: you need exactly infinitely many to get there, So as ZA series is XA or A, series of statistical desimals - infinity - is one Logecs Truth Value, one digit, one digit at X scope).
+
+---
+
+# CoPilot
+
+# StaTesc — Precise Specification (UTF‑8)
+
+StaTesc is the statistical digit system of Laegna. It extends the base‑4 truth digits I, O, A, E with statistical digits that encode unknowns, blends, reversals, and band‑dependent uncertainty. StaTesc operates on two parallel axes:
+- R‑axis — positional, exponential band
+- T‑axis — digit‑value band
+
+## 1. Base Truth Digits (known values)
+I — temporal negative  
+E — temporal positive  
+O — spatial false  
+A — spatial true  
+
+## 2. Statistical Digits (unknowns, blends, reversals)
+
+### 2.1 U — “half‑digit”, 1
+Meaning:
+- Either A or O with ½ probability
+- Or a value between A and O
+- Or a blend (A+O)/2
+- Or a “zero” in the A/O band
+- Digit width = ½ of a normal digit  
+Behavior:
+- Represents local spatial uncertainty
+- Used for digital statistics
+- Compatible with Logecs Logic
+
+### 2.2 ⋂ — “capital upside‑down U”, 2
+Meaning:
+- Either I or E with ½ probability
+- Or a value between I and E
+- Or a metaphorical blend (I+E)/2  
+Behavior:
+- Represents temporal uncertainty
+- Used for digital statistics
+- Parallel to U but in the I/E band
+
+### 2.3 ∩ — “small upside‑down U”
+Meaning:
+- Variant of ⋂ with smaller curvature  
+Behavior:
+- Used where a lighter temporal‑uncertainty glyph is needed
+
+### 2.4 Space / Empty Digit
+Meaning:
+- Digit does not exist
+- Processor decides how to handle entanglement  
+Common renderings:
+- _
+- ·
+- ○  
+Behavior:
+- Represents structural absence
+- Allows partial values or probability propagation
+
+### 2.5 V — “reverse A/O”, −1
+Meaning:
+- Higher band (I/E) unknown
+- Lower band (A/O) known but reversed  
+Behavior:
+- Represents reverse uncertainty
+- Unknown spreads upwards on R‑axis
+- Does not create fractal branching
+- Equivalent to “both bits unknown”
+
+### 2.6 W — “reverse I/E”, −2
+Meaning:
+- Lower band (A/O) unknown
+- Higher band (I/E) known but reversed  
+Behavior:
+- Represents complete knowledge
+- Model constraints resolve without depending on this digit
+- Equivalent to “both bits known”
+
+## 3. Statistical Behavior
+
+### 3.1 U and ⋂
+- Create digital statistical behavior
+- Compatible with Logecs Logic
+- Each digit can be associated unknown
+
+### 3.2 V and W
+- Create linear statistical behavior
+- Compatible with Logecs Math
+- Each range can be associated unknown
+
+## 4. Logecs ↔ Arithmetic Mapping
+AND → MULT  
+OR → ADD  
+NOR → symmetric division  
+NOT → minus  
+NET → higher‑dimensional minus  
+XOR → dual‑band division  
+A AND NOT B → A − B (special case)  
+
+Higher digits take precedence. Two‑band logic appears automatically.
+
+## 5. Half‑digit Geometry
+U‑digits may count as half‑width:
+- AUUAA has R = 4
+- AAAA has R = 4  
+
+StaTesc supports:
+- Moebius‑like symmetry
+- Octahedral projection
+- 1/2 vs 1/1 curvature relations
+- Non‑linear Euclidean projection
+
+---
+
+# UTF‑8 Mapping Table for StaTesc Digits
+
+| Digit | Meaning                                | UTF‑8 Character | Code Point              |
+|-------|-----------------------------------------|-----------------|-------------------------|
+| U     | A/O half‑digit, ½‑probability           | U               | U+0055                  |
+| ⋂     | I/E half‑digit, temporal uncertainty    | ⋂               | U+22C2                  |
+| ∩     | small upside‑down U                     | ∩               | U+2229                  |
+| V     | reverse A/O, upward unknown             | V               | U+0056                  |
+| W     | reverse I/E, fully known                | W               | U+0057                  |
+| I     | temporal negative                       | I               | U+0049                  |
+| E     | temporal positive                       | E               | U+0045                  |
+| O     | spatial false                           | O               | U+004F                  |
+| A     | spatial true                            | A               | U+0041                  |
+| Space | non‑digit placeholder                   | _ / · / ○       | U+005F / U+00B7 / U+25CB |
+
+# StaTesc — Formal Mathematical Definition
+
+StaTesc defines operations on the digit set
+
+$$
+\mathcal{D} = \{I, O, A, E, U, \cup, \cap, V, W, \varnothing_{\text{digit}}\}.
+$$
+
+Each digit has a semantic interpretation
+
+$$
+\phi(d) = (s, t, u)
+$$
+
+where  
+- $s \in \{A, O, \bot_s\}$ is the spatial component,  
+- $t \in \{I, E, \bot_t\}$ is the temporal component,  
+- $u \in \{0, \tfrac{1}{2}, 1\}$ is the uncertainty.
+
+StaTesc operations act on digits and lift to numbers digitwise.
+
+---
+
+## 1. Digit Semantics
+
+Truth digits:
+- $A = (A, \bot_t, 0)$  
+- $O = (O, \bot_t, 0)$  
+- $I = (\bot_s, I, 0)$  
+- $E = (\bot_s, E, 0)$  
+
+Statistical digits:
+- $U = (\{A,O\}, \bot_t, \tfrac{1}{2})$  
+- $\cup = (\bot_s, \{I,E\}, \tfrac{1}{2})$  
+- $\cap = (\bot_s, \{I,E\}, \tfrac{1}{2})$  
+- $V = (A/O,\; \bot_t,\; u_V)$ with upward uncertainty  
+- $W = (\bot_s,\; I/E,\; u_W)$ with downward uncertainty  
+
+Empty digit:
+- $\varnothing_{\text{digit}} = (\bot_s, \bot_t, 1)$
+
+---
+
+## 2. Core StaTesc Operations
+
+Each operation is a binary or unary function
+
+$$
+\odot : \mathcal{D} \times \mathcal{D} \to \mathcal{D}.
+$$
+
+Operations are defined on semantics via $\phi$ and then mapped back to digits.
+
+---
+
+## 2.1 AND → Multiplication
+
+$$
+d_1 \land d_2 := d_1 \cdot d_2
+$$
+
+with semantic rule
+
+$$
+\phi(d_1 \cdot d_2)
+  = (\, s_1 \land s_2,\; t_1 \land t_2,\; u_{\text{AND}}(u_1,u_2) \,).
+$$
+
+Uncertainty $u_{\text{AND}}$ is typically $\max(u_1,u_2)$.
+
+---
+
+## 2.2 OR → Addition
+
+$$
+d_1 \lor d_2 := d_1 + d_2
+$$
+
+with semantic rule
+
+$$
+\phi(d_1 + d_2)
+  = (\, s_1 \lor s_2,\; t_1 \lor t_2,\; u_{\text{OR}}(u_1,u_2) \,).
+$$
+
+Uncertainty $u_{\text{OR}}$ is typically $\min(u_1,u_2)$.
+
+---
+
+## 2.3 NOR → Symmetric Division
+
+NOR is defined as negation of OR:
+
+$$
+\text{NOR}(d_1,d_2) := \neg(d_1 + d_2).
+$$
+
+Symmetric division is
+
+$$
+d_1 /\!\!/ d_2 := \text{NOR}(d_1,d_2)
+$$
+
+with semantic rule
+
+$$
+\phi(d_1 /\!\!/ d_2)
+  = (\, \neg(s_1 \lor s_2),\; \neg(t_1 \lor t_2),\; u_{\text{NOR}}(u_1,u_2) \,).
+$$
+
+---
+
+## 2.4 NOT → Unary Minus
+
+$$
+\neg d := -d
+$$
+
+with semantic rule
+
+$$
+\phi(-d) = (\, \neg s,\; \neg t,\; u \,).
+$$
+
+Uncertainty is preserved.
+
+---
+
+## 2.5 NET → Higher‑Band Minus
+
+NET acts on the positional (R) band:
+
+$$
+\text{NET}(d) := d^{\ominus}
+$$
+
+with semantic rule
+
+$$
+\phi(d^{\ominus}) = (\, s,\; t,\; u^{\ominus} \,).
+$$
+
+Here $u^{\ominus}$ encodes reversal or reordering in the R‑band.
+
+---
+
+## 2.6 XOR → Dual‑Band Division
+
+$$
+d_1 \oplus d_2 := d_1 \div d_2
+$$
+
+with semantic rule
+
+$$
+\phi(d_1 \div d_2)
+  = (\, s_{\text{XOR}}(s_1,s_2),\; t_{\text{XOR}}(t_1,t_2),\; u_{\text{XOR}}(u_1,u_2) \,).
+$$
+
+XOR combines spatial and temporal components exclusively.
+
+---
+
+## 2.7 A AND NOT B → Subtraction
+
+$$
+A \land \neg B \;\mapsto\; A - B
+$$
+
+General subtraction:
+
+$$
+d_1 - d_2 := d_1 + (-d_2)
+$$
+
+with semantic rule
+
+$$
+\phi(d_1 - d_2)
+  = (\, s_1 \land \neg s_2,\; t_1 \land \neg t_2,\; u_{\text{sub}}(u_1,u_2) \,).
+$$
+
+---
+
+## 3. Lifting Operations to Numbers
+
+A number is a digit sequence
+
+$$
+x = (d_0, d_1, \dots, d_{n-1}).
+$$
+
+For any binary operation $\odot$:
+
+$$
+(x \odot y)_k = d_k \odot e_k.
+$$
+
+Empty digits $\varnothing_{\text{digit}}$ act as neutral or absorbing elements depending on the operation.
+
+Higher‑band precedence applies: temporal components dominate spatial ones when conflicts arise.
+
+---
+
+## 4. Summary
+
+StaTesc defines a digit algebra where:
+- digits carry spatial, temporal, and uncertainty components,
+- operations correspond to Logecs connectives,
+- semantics combine via $(s,t,u)$ rules,
+- numbers inherit operations digitwise with R‑band precedence.
+
+This is the formal mathematical core of StaTesc.
+
+# StaTesc — Formal Mathematical Definition and Truth Tables
+
+StaTesc defines operations on the digit set
+
+$$
+\mathcal{D} = \{I, O, A, E, U, \cup, \cap, V, W, \varnothing_{\text{digit}}\}.
+$$
+
+Each digit has semantic interpretation
+
+$$
+\phi(d) = (s, t, u)
+$$
+
+where  
+- $s \in \{A, O, \bot_s\}$ is the spatial component,  
+- $t \in \{I, E, \bot_t\}$ is the temporal component,  
+- $u \in \{0, \tfrac{1}{2}, 1\}$ is uncertainty.
+
+Operations act on digits and lift to numbers digitwise.
+
+---
+
+# 1. Digit Semantics
+
+Truth digits:
+- $A = (A, \bot_t, 0)$  
+- $O = (O, \bot_t, 0)$  
+- $I = (\bot_s, I, 0)$  
+- $E = (\bot_s, E, 0)$  
+
+Statistical digits:
+- $U = (\{A,O\}, \bot_t, \tfrac{1}{2})$  
+- $\cup = (\bot_s, \{I,E\}, \tfrac{1}{2})$  
+- $\cap = (\bot_s, \{I,E\}, \tfrac{1}{2})$  
+- $V = (A/O,\; \bot_t,\; u_V)$ with upward uncertainty  
+- $W = (\bot_s,\; I/E,\; u_W)$ with downward uncertainty  
+
+Empty digit:
+- $\varnothing_{\text{digit}} = (\bot_s, \bot_t, 1)$
+
+---
+
+# 2. StaTesc Operations
+
+Each operation is a function
+
+$$
+\odot : \mathcal{D} \times \mathcal{D} \to \mathcal{D}.
+$$
+
+Operations are defined on semantics via $\phi$.
+
+---
+
+## 2.1 AND → Multiplication
+
+$$
+d_1 \land d_2 := d_1 \cdot d_2
+$$
+
+$$
+\phi(d_1 \cdot d_2)
+  = (\, s_1 \land s_2,\; t_1 \land t_2,\; u_{\text{AND}}(u_1,u_2) \,).
+$$
+
+Uncertainty rule: $u_{\text{AND}} = \max(u_1,u_2)$.
+
+---
+
+## 2.2 OR → Addition
+
+$$
+d_1 \lor d_2 := d_1 + d_2
+$$
+
+$$
+\phi(d_1 + d_2)
+  = (\, s_1 \lor s_2,\; t_1 \lor t_2,\; u_{\text{OR}}(u_1,u_2) \,).
+$$
+
+Uncertainty rule: $u_{\text{OR}} = \min(u_1,u_2)$.
+
+---
+
+## 2.3 NOR → Symmetric Division
+
+$$
+\text{NOR}(d_1,d_2) := \neg(d_1 + d_2)
+$$
+
+$$
+d_1 /\!\!/ d_2 := \text{NOR}(d_1,d_2)
+$$
+
+$$
+\phi(d_1 /\!\!/ d_2)
+  = (\, \neg(s_1 \lor s_2),\; \neg(t_1 \lor t_2),\; u_{\text{NOR}}(u_1,u_2) \,).
+$$
+
+---
+
+## 2.4 NOT → Unary Minus
+
+$$
+\neg d := -d
+$$
+
+$$
+\phi(-d) = (\, \neg s,\; \neg t,\; u \,).
+$$
+
+Uncertainty preserved.
+
+---
+
+## 2.5 NET → Higher‑Band Minus
+
+$$
+\text{NET}(d) := d^{\ominus}
+$$
+
+$$
+\phi(d^{\ominus}) = (\, s,\; t,\; u^{\ominus} \,).
+$$
+
+$u^{\ominus}$ encodes R‑band reversal.
+
+---
+
+## 2.6 XOR → Dual‑Band Division
+
+$$
+d_1 \oplus d_2 := d_1 \div d_2
+$$
+
+$$
+\phi(d_1 \div d_2)
+  = (\, s_{\text{XOR}}(s_1,s_2),\; t_{\text{XOR}}(t_1,t_2),\; u_{\text{XOR}}(u_1,u_2) \,).
+$$
+
+---
+
+## 2.7 A AND NOT B → Subtraction
+
+$$
+A \land \neg B \;\mapsto\; A - B
+$$
+
+$$
+d_1 - d_2 := d_1 + (-d_2)
+$$
+
+$$
+\phi(d_1 - d_2)
+  = (\, s_1 \land \neg s_2,\; t_1 \land \neg t_2,\; u_{\text{sub}}(u_1,u_2) \,).
+$$
+
+---
+
+# 3. Lifting Operations to Numbers
+
+A number is a digit sequence
+
+$$
+x = (d_0, d_1, \dots, d_{n-1}).
+$$
+
+Digitwise lifting:
+
+$$
+(x \odot y)_k = d_k \odot e_k.
+$$
+
+Empty digits act as neutral or absorbing elements depending on $\odot$.
+
+Higher‑band precedence applies.
+
+---
+
+# 4. StaTesc Truth Tables
+
+Truth tables are defined on the semantic triples $(s,t,u)$ and mapped back to digits.
+
+Below are the core tables for the most important statistical digits.
+
+---
+
+## 4.1 AND Table for $\{A, O, U\}$
+
+| $d_1$ | $d_2$ | $d_1 \land d_2$ |
+|-------|-------|------------------|
+| A     | A     | A                |
+| A     | O     | O                |
+| O     | A     | O                |
+| O     | O     | O                |
+| A     | U     | U                |
+| O     | U     | O                |
+| U     | A     | U                |
+| U     | O     | O                |
+| U     | U     | U                |
+
+---
+
+## 4.2 OR Table for $\{A, O, U\}$
+
+| $d_1$ | $d_2$ | $d_1 \lor d_2$ |
+|-------|-------|----------------|
+| A     | A     | A              |
+| A     | O     | A              |
+| O     | A     | A              |
+| O     | O     | O              |
+| A     | U     | A              |
+| O     | U     | U              |
+| U     | A     | A              |
+| U     | O     | U              |
+| U     | U     | U              |
+
+---
+
+## 4.3 Temporal AND Table for $\{I, E, \cup\}$
+
+| $d_1$ | $d_2$ | $d_1 \land d_2$ |
+|-------|-------|------------------|
+| I     | I     | I                |
+| I     | E     | I                |
+| E     | I     | I                |
+| E     | E     | E                |
+| I     | $\cup$ | $\cup$          |
+| E     | $\cup$ | E               |
+| $\cup$ | I     | $\cup$          |
+| $\cup$ | E     | E               |
+| $\cup$ | $\cup$ | $\cup$         |
+
+---
+
+## 4.4 Temporal OR Table for $\{I, E, \cup\}$
+
+| $d_1$ | $d_2$ | $d_1 \lor d_2$ |
+|-------|-------|----------------|
+| I     | I     | I              |
+| I     | E     | E              |
+| E     | I     | E              |
+| E     | E     | E              |
+| I     | $\cup$ | $\cup$        |
+| E     | $\cup$ | E             |
+| $\cup$ | I     | $\cup$        |
+| $\cup$ | E     | E             |
+| $\cup$ | $\cup$ | $\cup$       |
+
+---
+
+## 4.5 V and W Interaction Table (uncertainty‑band rules)
+
+| $d_1$ | $d_2$ | Result |
+|-------|-------|--------|
+| V     | A     | V      |
+| V     | O     | V      |
+| V     | U     | V      |
+| W     | I     | W      |
+| W     | E     | W      |
+| W     | $\cup$ | W      |
+| V     | W     | V      |
+| W     | V     | W      |
+
+Interpretation:
+- $V$ dominates spatial uncertainty.  
+- $W$ dominates temporal uncertainty.  
+- Mixed $V/W$ resolves by band precedence.
+
+---
+
+# 5. Summary
+
+StaTesc defines:
+- a digit algebra on $\mathcal{D}$,  
+- semantic triples $(s,t,u)$,  
+- operations corresponding to Logecs connectives,  
+- digitwise lifting to numbers,  
+- truth tables for spatial, temporal, and band‑uncertainty digits.
+
+This completes the formal mathematical definition and truth‑table specification of StaTesc.
+
+# StaTesc — Canonical Algebraic Axioms
+
+StaTesc is a digit algebra on
+
+$$
+\mathcal{D} = \{I, O, A, E, U, \cup, \cap, V, W, \varnothing_{\text{digit}}\}
+$$
+
+with operations corresponding to Logecs connectives.  
+Each digit has semantics
+
+$$
+\phi(d) = (s, t, u)
+$$
+
+where $s$ is spatial, $t$ temporal, and $u$ uncertainty.
+
+The canonical axioms cover associativity, band‑precedence, and uncertainty‑monotonicity.
+
+---
+
+# 1. Associativity
+
+For any binary operation $\odot \in \{\land, \lor, /\!\!/, \div\}$ and digits $a,b,c \in \mathcal{D}$:
+
+$$
+(a \odot b) \odot c = a \odot (b \odot c).
+$$
+
+This holds at the semantic level:
+
+$$
+\phi\big((a \odot b) \odot c\big)
+  = \phi\big(a \odot (b \odot c)\big).
+$$
+
+Thus StaTesc operations are associative.
+
+---
+
+# 2. Commutativity (Core Operations)
+
+For core operations AND and OR:
+
+$$
+a \land b = b \land a,
+$$
+
+$$
+a \lor b = b \lor a.
+$$
+
+Semantically:
+
+$$
+\phi(a \land b) = \phi(b \land a),
+$$
+
+$$
+\phi(a \lor b) = \phi(b \lor a).
+$$
+
+Symmetric division and XOR are also commutative:
+
+$$
+a /\!\!/ b = b /\!\!/ a,
+$$
+
+$$
+a \oplus b = b \oplus a.
+$$
+
+---
+
+# 3. Distributivity
+
+AND distributes over OR:
+
+$$
+a \land (b \lor c) = (a \land b) \lor (a \land c).
+$$
+
+OR distributes over AND:
+
+$$
+a \lor (b \land c) = (a \lor b) \land (a \lor c).
+$$
+
+These equalities hold at the semantic level via $(s,t,u)$.
+
+---
+
+# 4. Band‑Precedence Axioms
+
+StaTesc has two bands:
+- spatial band $s$ (A/O),
+- temporal band $t$ (I/E).
+
+Higher‑band precedence means temporal dominates spatial when conflicts arise.
+
+For any operation $\odot$:
+
+- If $t_1 \neq \bot_t$ or $t_2 \neq \bot_t$, then the result’s temporal component is determined first:
+
+  $$ 
+  t_{\text{res}} = t_1 \odot_t t_2 
+  $$
+
+  and spatial component $s_{\text{res}}$ is adjusted to be consistent with $t_{\text{res}}$.
+
+- If both $t_1 = \bot_t$ and $t_2 = \bot_t$, then:
+
+  $$ 
+  s_{\text{res}} = s_1 \odot_s s_2 
+  $$
+
+Temporal precedence axiom:
+
+$$
+\forall a,b \in \mathcal{D}:\; t(a \odot b) \text{ is computed before } s(a \odot b).
+$$
+
+---
+
+# 5. Uncertainty‑Monotonicity Axioms
+
+Uncertainty $u$ is monotone under operations.
+
+For AND:
+
+$$
+u_{\text{AND}}(u_1,u_2) = \max(u_1,u_2).
+$$
+
+Axiom:
+
+$$
+u_{\text{AND}}(u_1,u_2) \ge u_1,\quad
+u_{\text{AND}}(u_1,u_2) \ge u_2.
+$$
+
+For OR:
+
+$$
+u_{\text{OR}}(u_1,u_2) = \min(u_1,u_2).
+$$
+
+Axiom:
+
+$$
+u_{\text{OR}}(u_1,u_2) \le u_1,\quad
+u_{\text{OR}}(u_1,u_2) \le u_2.
+$$
+
+For NOT:
+
+$$
+u_{\text{NOT}}(u) = u.
+$$
+
+Axiom:
+
+$$
+u_{\text{NOT}}(u) = u.
+$$
+
+For XOR and symmetric division, uncertainty is non‑decreasing:
+
+$$
+u_{\text{XOR}}(u_1,u_2) \ge \max(u_1,u_2),
+$$
+
+$$
+u_{\text{NOR}}(u_1,u_2) \ge \max(u_1,u_2).
+$$
+
+---
+
+# 6. Identity and Absorbing Elements
+
+There exist identity elements for AND and OR:
+
+- AND identity $e_{\land}$:
+
+  $$
+  \forall a \in \mathcal{D}:\; a \land e_{\land} = a.
+  $$
+
+- OR identity $e_{\lor}$:
+
+  $$
+  \forall a \in \mathcal{D}:\; a \lor e_{\lor} = a.
+  $$
+
+Empty digit $\varnothing_{\text{digit}}$ acts as absorbing element for certain operations:
+
+$$
+a \land \varnothing_{\text{digit}} = \varnothing_{\text{digit}},
+$$
+
+$$
+a /\!\!/ \varnothing_{\text{digit}} = \varnothing_{\text{digit}}.
+$$
+
+---
+
+# 7. Band‑Consistency Axiom
+
+For any digit $d$:
+
+$$
+\phi(d) = (s,t,u)
+$$
+
+must satisfy:
+
+- If $t \neq \bot_t$, then $s$ is constrained to be compatible with $t$ under StaTesc rules.
+- If $s \neq \bot_s$, then $t$ is constrained to be compatible with $s$ when temporal band is active.
+
+Formally:
+
+$$
+\forall d \in \mathcal{D}:\; \text{BandConsistency}(\phi(d)) = \text{true}.
+$$
+
+---
+
+# 8. Summary
+
+StaTesc satisfies:
+- associativity and commutativity for core operations,
+- distributivity between AND and OR,
+- band‑precedence (temporal over spatial),
+- uncertainty‑monotonicity (AND increases, OR decreases, NOT preserves),
+- identity and absorbing elements,
+- band‑consistency between spatial and temporal components.
+
+These axioms define the canonical algebraic structure of StaTesc.
