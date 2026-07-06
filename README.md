@@ -816,17 +816,13 @@ For any operation $\odot$:
 
 - If $t_1 \neq \bot_t$ or $t_2 \neq \bot_t$, then the result’s temporal component is determined first:
 
-  $$ 
-  t_{\text{res}} = t_1 \odot_t t_2 
-  $$
+  $t_{\text{res}} = t_1 \odot_t t_2$
 
   and spatial component $s_{\text{res}}$ is adjusted to be consistent with $t_{\text{res}}$.
 
 - If both $t_1 = \bot_t$ and $t_2 = \bot_t$, then:
 
-  $$ 
-  s_{\text{res}} = s_1 \odot_s s_2 
-  $$
+  $s_{\text{res}} = s_1 \odot_s s_2$
 
 Temporal precedence axiom:
 
@@ -896,15 +892,11 @@ There exist identity elements for AND and OR:
 
 - AND identity $e_{\land}$:
 
-  $$
-  \forall a \in \mathcal{D}:\; a \land e_{\land} = a.
-  $$
+  $\forall a \in \mathcal{D}:\; a \land e_{\land} = a.$
 
 - OR identity $e_{\lor}$:
 
-  $$
-  \forall a \in \mathcal{D}:\; a \lor e_{\lor} = a.
-  $$
+  $\forall a \in \mathcal{D}:\; a \lor e_{\lor} = a.$
 
 Empty digit $\varnothing_{\text{digit}}$ acts as absorbing element for certain operations:
 
