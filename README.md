@@ -1,3 +1,5 @@
+![Cover](Graphics/Cover.png)
+
 # @CoPilot: introductions@
 
 # StaTesc — Popular‑Science Introduction
@@ -402,6 +404,8 @@ Its semantic triples, band‑precedence rules, and uncertainty‑monotonicity ax
 
 ---
 
+![Tech1](Graphics/Tech1.png)
+
 # LaeStaDesc
 In Laegna Language, Sta is stable terrain, and Desc is like table, or like foundation or foundation disc. This much about arts.
 
@@ -431,6 +435,8 @@ Other context to use V and W:
     - Remaining model knows the bits and thus, it has solution constraints which *exceptionally this case or in minority space of it's operation* resolve this without depending on this bit.
       - Setting the bit would not make model false.
 
+![Tech2](Graphics/Tech2.png)
+
 StaTesc and Logecs principle:
 - Numbers have the values arranged into base system amplified (recursive, accelerative) multiplier.
 - Logecs values have the values arranged into their meaningful positions in way that higher digit takes precedence over lower digit.
@@ -448,6 +454,8 @@ Using statistics of merging V and W with common numbers (base-4 I, O, A, E, ...)
 
 Using statistics of merging U and ⋂ with common numbers (base-4 I, O, A, E, ...) creates statistical aspect which is digital, behaves well with Logecs Logic (Logecs Logic = Logecs Logecs, automation = Logex and ideal logic machine = Ponegation, aspect of overdeciding and changing past decisions as the axes become reverse, such as betrayals - and math scope can betray as you evolve, it can change signs abd scopes, so you are surprised and disappointed, but always necessarily and fundamentally, betrayed by number or truth value).
 - Each digit can be associated unknown.
+
+![Tech3](Graphics/Tech3.png)
 
 What is unknown?
 
@@ -1674,3 +1682,5 @@ StaTesc satisfies:
 - band‑consistency between spatial and temporal components.
 
 These axioms define the canonical algebraic structure of StaTesc.
+
+![Ending](Graphics/Ending.png)
